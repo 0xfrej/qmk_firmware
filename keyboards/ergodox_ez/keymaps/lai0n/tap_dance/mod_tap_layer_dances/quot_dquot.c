@@ -1,4 +1,3 @@
-//instanalize an instance of 'tap' for the Quote - Double Quote tap dance.
 static tap quot_dquot_state = {
     .is_press_action = true,
     .state           = 0

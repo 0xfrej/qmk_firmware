@@ -1,4 +1,3 @@
-//instanalize an instance of 'tap' for the U - Arrows - Gui tap dance.
 static tap u_arrows_gui_state = {
     .is_press_action = true,
     .state           = 0

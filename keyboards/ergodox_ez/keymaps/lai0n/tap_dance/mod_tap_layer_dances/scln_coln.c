@@ -1,4 +1,3 @@
-//instanalize an instance of 'tap' for the Semicolon - Colon tap dance.
 static tap scln_coln_state = {
     .is_press_action = true,
     .state           = 0
@@ -20,6 +19,11 @@ void scln_coln_finished(qk_tap_dance_state_t *state, void *user_data) {
         case DOUBLE_TAP:
             register_code16(KC_COLN);
             break;
+
+        case DOUBLE_SINGLE_TAP:
+            register_code16(KC_COLN);
+            register_code16(KC_COLN);
+            break;
     }
 }
 
@@ -36,6 +40,11 @@ void scln_coln_reset(qk_tap_dance_state_t *state, void *user_data) {
             break;
 
         case DOUBLE_TAP:
+            unregister_code16(KC_COLN);
+            break;
+
+        case DOUBLE_SINGLE_TAP:
+            unregister_code16(KC_COLN);
             unregister_code16(KC_COLN);
             break;
     }

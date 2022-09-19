@@ -1,4 +1,3 @@
-//instanalize an instance of 'tap' for the W - Media - Meh tap dance.
 static tap w_media_meh_state = {
     .is_press_action = true,
     .state           = 0

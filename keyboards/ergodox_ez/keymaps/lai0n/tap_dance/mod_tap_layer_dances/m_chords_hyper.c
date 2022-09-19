@@ -1,4 +1,3 @@
-//instanalize an instance of 'tap' for the M - Chords - Hyper tap dance.
 static tap m_chords_hyper_state = {
     .is_press_action = true,
     .state           = 0

@@ -1,4 +1,3 @@
-//instanalize an instance of 'tap' for the J - Media - Meh tap dance.
 static tap j_media_meh_state = {
     .is_press_action = true,
     .state           = 0

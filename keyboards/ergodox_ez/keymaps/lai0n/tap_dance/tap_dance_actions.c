@@ -1,20 +1,34 @@
+#define ACTION_TAP_DANCE_ADVANCED( \
+    kc_s_t, \
+    kc_s_h, \
+    kc_d_t, \
+    kc_d_h, \
+    kc_t_t, \
+    kc_t_h, \
+    kc_d_s_t, \
+    kc_t_s_t \
+  ) { \
+    .fn = { NULL, qk_tap_dance_advanced_finished, qk_tap_dance_advanced_reset }, \
+    .user_data = (void *)&((qk_tap_dance_advanced_t) { kc_s_t, kc_s_h, kc_d_t, kc_d_h, kc_d_s_t, kc_t_t, kc_t_h, kc_t_s_t }),  \
+  }
+
+#define _ KC_NO
 // Register the double tap dances:
 qk_tap_dance_action_t tap_dance_actions[] = {
-    [EQL_PLUS]     = ACTION_TAP_DANCE_DOUBLE(KC_EQL,  KC_PLUS),
-    [MINS_UNDS]    = ACTION_TAP_DANCE_DOUBLE(KC_MINS, KC_UNDS),
-    [SLSH_BSLS]    = ACTION_TAP_DANCE_DOUBLE(KC_SLSH, KC_BSLS),
-    [GRV_TILD]     = ACTION_TAP_DANCE_DOUBLE(KC_GRV,  KC_TILD),
+    [EQL_PLUS]     = ACTION_TAP_DANCE_ADVANCED(KC_EQL, C_DEQL, KC_PLUS, C_INC, C_TEQL, _,_,_),
+    [MINS_UNDS]    = ACTION_TAP_DANCE_ADVANCED(KC_MINS, C_DEC, KC_UNDS, C_DUNDS, _,_,_,_),
+    [SLSH_BSLS]    = ACTION_TAP_DANCE_ADVANCED(KC_SLSH, _, KC_BSLS, C_DBSLS, _,_,_,_),
+    [GRV_TILD]     = ACTION_TAP_DANCE_ADVANCED(KC_GRV, _, KC_TILD, _, C_TGRV, _,_,_),
     [ASTR_CIRC]    = ACTION_TAP_DANCE_DOUBLE(KC_ASTR, KC_CIRC),
-    [APMR_PIPE]    = ACTION_TAP_DANCE_DOUBLE(KC_AMPR, KC_PIPE),
-    [EXLM_QUES]    = ACTION_TAP_DANCE_DOUBLE(KC_EXLM, KC_QUES),
+    [APMR_PIPE]    = ACTION_TAP_DANCE_ADVANCED(KC_AMPR, _, KC_PIPE, _, C_OR, _, C_AND, _),
+    [EXLM_QUES]    = ACTION_TAP_DANCE_ADVANCED(KC_EXLM, _,KC_QUES, _, C_DQMRK, _,_,_),
     [HASH_PERC]    = ACTION_TAP_DANCE_DOUBLE(KC_HASH, KC_PERC),
     [DLR_AT]       = ACTION_TAP_DANCE_DOUBLE(KC_DLR,  KC_AT),
     [LPRN_LABK]    = ACTION_TAP_DANCE_DOUBLE(KC_LPRN, KC_LABK),
-    [RPRN_RABK]    = ACTION_TAP_DANCE_DOUBLE(KC_RPRN, KC_RABK),
+    [RPRN_RABK]    = ACTION_TAP_DANCE_ADVANCED(KC_RPRN, _, KC_RABK, _,_,_, C_OBJACC, _),
     [LCBR_LBRC]    = ACTION_TAP_DANCE_DOUBLE(KC_LCBR, KC_LBRC),
     [RCBR_RBRC]    = ACTION_TAP_DANCE_DOUBLE(KC_RCBR, KC_RBRC),
-    [HOLD_BOOT]    = ACTION_TAP_DANCE_DOUBLE(KC_NO,   QK_BOOT),
-    [HOLD_EEP_RST] = ACTION_TAP_DANCE_DOUBLE(KC_NO,   EEP_RST),
+    [LSFT_DEL]     = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_DEL),
     [SCLN_COLN]    = ACTION_TAP_DANCE_FN_ADVANCED(NULL, scln_coln_finished,       scln_coln_reset),
     [QUOT_DQUO]    = ACTION_TAP_DANCE_FN_ADVANCED(NULL, quot_dquot_finished,      quot_dquot_reset),
     [DOT_COMM]     = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dot_comm_finished,        dot_comm_reset),
@@ -25,7 +39,11 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [W_MED_MEH]    = ACTION_TAP_DANCE_FN_ADVANCED(NULL, w_media_meh_finished,     w_media_meh_reset),
     [K_NUM_HYP]    = ACTION_TAP_DANCE_FN_ADVANCED(NULL, k_numpad_hyper_finished,  k_numpad_hyper_reset),
     [M_CHO_HYP]    = ACTION_TAP_DANCE_FN_ADVANCED(NULL, m_chords_hyper_finished,  m_chords_hyper_reset),
+    [HOLD_BOOT]    = ACTION_TAP_DANCE_FN_ADVANCED(NULL, none_boot_finished,       none_boot_reset),
+    [HOLD_EEP_RST] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, none_eep_rst_finished,    none_eep_rst_reset),
 };
+
+#undef _
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {

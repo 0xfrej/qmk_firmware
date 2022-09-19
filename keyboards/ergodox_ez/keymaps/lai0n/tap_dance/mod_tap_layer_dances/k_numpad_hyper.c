@@ -1,4 +1,3 @@
-//instanalize an instance of 'tap' for the K - Numpad - Hyper tap dance.
 static tap k_numpad_hyper_state = {
     .is_press_action = true,
     .state           = 0

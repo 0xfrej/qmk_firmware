@@ -10,7 +10,6 @@ BOOTMAGIC_ENABLE = no
 # optimizations
 LTO_ENABLE 				= yes
 AVR_USE_MINIMAL_PRINTF 	= yes
-MOUSEKEY_ENABLE 		= no # (+4700b) we will use pointing device for this using hack shown in this video (https://www.youtube.com/watch?v=bORY26QnDvA)
 
 # debug
 DEBUG_ENABLE	= no
@@ -23,14 +22,14 @@ LEADER_ENABLE 				= yes
 TAP_DANCE_ENABLE 			= yes
 CAPS_WORD_ENABLE 			= yes
 COMBO_ENABLE      			= no
-AUTO_SHIFT_ENABLE    		= yes
-AUTO_SHIFT_MODIFIERS 		= no
+AUTO_SHIFT_ENABLE    		= no # Autoshift collides with the layout so it's not an useful feature
 KEY_LOCK_ENABLE   			= no  # (+1730b)
 SPACE_CADET_ENABLE 			= no
 GRAVE_ESC_ENABLE 			= no
 MAGIC_ENABLE 				= no
 SEND_STRING_ENABLE 			= yes
-POINTING_DEVICE_ENABLE 		= yes # Used as mousekey replacement because it's more lightweight
+MOUSEKEY_ENABLE 			= yes # (+4700b) we will use pointing device for this using hack shown in this video (https://www.youtube.com/watch?v=bORY26QnDvA)
+POINTING_DEVICE_ENABLE 		= no # Used as mousekey replacement because it's more lightweight
 POINTING_DEVICE_DRIVER		= custom
 DYNAMIC_MACRO_ENABLE		= yes
 PROGRAMMABLE_BUTTON_ENABLE 	= no

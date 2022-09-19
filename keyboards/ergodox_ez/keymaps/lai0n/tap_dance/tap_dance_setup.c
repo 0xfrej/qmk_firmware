@@ -3,6 +3,17 @@ typedef struct {
     int state;
 } tap;
 
+typedef struct {
+    uint16_t kc_s_t;
+    uint16_t kc_s_h;
+    uint16_t kc_d_t;
+    uint16_t kc_d_h;
+    uint16_t kc_d_s_t;
+    uint16_t kc_t_t;
+    uint16_t kc_t_h;
+    uint16_t kc_t_s_t;
+} qk_tap_dance_advanced_t;
+
 enum {
     SINGLE_TAP        = 1,
     SINGLE_HOLD       = 2,

@@ -1,4 +1,3 @@
-//instanalize an instance of 'tap' for the H - Mouse - Gui tap dance.
 static tap h_mouse_gui_state = {
     .is_press_action = true,
     .state           = 0

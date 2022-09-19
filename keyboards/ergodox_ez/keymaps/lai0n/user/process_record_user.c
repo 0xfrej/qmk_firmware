@@ -1,71 +1,128 @@
+bool SCROLL_LOCK = false;
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    // if (!process_record_dynamic_macro(keycode, record)) {
-    //     return false;
-    // }
+    switch (keycode) {
+        case LED_LEVEL:
+            if (record->event.pressed) {
+                keyboard_config.led_level++;
+                if (keyboard_config.led_level > 4) {
+                    keyboard_config.led_level = 0;
+                }
+                ergodox_led_all_set((uint8_t)keyboard_config.led_level * 255 / 4);
+                eeconfig_update_kb(keyboard_config.raw);
+                layer_state_set_kb(layer_state);
+            }
+            return true;
+        case KC_MS_WH_UP ... KC_MS_WH_RIGHT:
+            if (record->event.pressed) {
+                if (SCROLL_LOCK) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
 
-    return true;
-    // switch (keycode) {
-    //     case KC_CLCK:
-    //         if (record->event.pressed) {
-    //             if (!(CAPS_LOCK)) {
-    //                 ergodox_right_led_1_on();
-    //                 CAPS_LOCK = true;
-    //             } else {
-    //                 ergodox_right_led_1_off();
-    //                 CAPS_LOCK = false;
-    //             }
-    //         }
-
-    //         return true;
-
-    //     case KC_NLCK:
-    //         if (record->event.pressed) {
-    //             if (!(NUM_LOCK)) {
-    //                 ergodox_right_led_2_on();
-    //                 NUM_LOCK = true;
-    //             } else {
-    //                 ergodox_right_led_2_off();
-    //                 NUM_LOCK = false;
-    //             }
-    //         }
-
-    //         return true;
-
-    //     case KC_SLCK:
-    //         if (record->event.pressed) {
-    //             if (!(SCROLL_LOCK)) {
-    //                 ergodox_right_led_3_on();
-    //                 SCROLL_LOCK = true;
-    //             } else {
-    //                 ergodox_right_led_3_off();
-    //                 SCROLL_LOCK = false;
-    //             }
-    //         }
-
-    //         return true;
-
-    //     case KC_MS_WH_UP ... KC_MS_WH_RIGHT:
-    //         if (record->event.pressed) {
-    //             if (SCROLL_LOCK) {
-    //                 return false;
-    //             } else {
-    //                 return true;
-    //             }
-    //         }
-
-    //     case MY_CUSTOM_MACRO:
-    //         if (record->event.pressed) {
-    //             SEND_STRING("QMK is the best thing ever!"); // this is our macro!
-    //             return false;
-    //         }
-
-    //     case MY_OTHER_MACRO:
-    //         if (record->event.pressed) {
-    //             SEND_STRING(SS_LCTRL("ac")); // selects all and copies
-    //             return false;
-    //         }
-
-    //     default:
-    //         return true;
-    // }
+        case C_INC:
+            if (record->event.pressed) {
+                register_code16(KC_PLUS);
+                register_code16(KC_PLUS);
+                unregister_code16(KC_PLUS);
+                unregister_code16(KC_PLUS);
+            }
+            return true;
+        case C_DEC:
+            if (record->event.pressed) {
+                register_code16(KC_MINS);
+                register_code16(KC_MINS);
+                unregister_code16(KC_MINS);
+                unregister_code16(KC_MINS);
+            }
+            return true;
+        case C_AND:
+            if (record->event.pressed) {
+                register_code16(KC_AMPR);
+                register_code16(KC_AMPR);
+                unregister_code16(KC_AMPR);
+                unregister_code16(KC_AMPR);
+            }
+            return true;
+        case C_OR:
+            if (record->event.pressed) {
+                register_code16(KC_PIPE);
+                register_code16(KC_PIPE);
+                unregister_code16(KC_PIPE);
+                unregister_code16(KC_PIPE);
+            }
+            return true;
+        case C_DQMRK:
+            if (record->event.pressed) {
+                register_code16(KC_QUES);
+                register_code16(KC_QUES);
+                unregister_code16(KC_QUES);
+                unregister_code16(KC_QUES);
+            }
+            return true;
+        case C_DBSLS:
+            if (record->event.pressed) {
+                register_code16(KC_NUBS);
+                register_code16(KC_NUBS);
+                unregister_code16(KC_NUBS);
+                unregister_code16(KC_NUBS);
+            }
+            return true;
+        case C_DUNDS:
+            if (record->event.pressed) {
+                register_code16(KC_UNDS);
+                register_code16(KC_UNDS);
+                unregister_code16(KC_UNDS);
+                unregister_code16(KC_UNDS);
+            }
+            return true;
+        case C_DEQL:
+            if (record->event.pressed) {
+                register_code16(KC_EQL);
+                register_code16(KC_EQL);
+                unregister_code16(KC_EQL);
+                unregister_code16(KC_EQL);
+            }
+            return true;
+        case C_TEQL:
+            if (record->event.pressed) {
+                register_code16(KC_EQL);
+                register_code16(KC_EQL);
+                register_code16(KC_EQL);
+                unregister_code16(KC_EQL);
+                unregister_code16(KC_EQL);
+                unregister_code16(KC_EQL);
+            }
+            return true;
+        case C_DCLN:
+            if (record->event.pressed) {
+                register_code16(KC_COLN);
+                register_code16(KC_COLN);
+                unregister_code16(KC_COLN);
+                unregister_code16(KC_COLN);
+            }
+            return true;
+        case C_TGRV:
+            if (record->event.pressed) {
+                register_code16(KC_GRV);
+                register_code16(KC_GRV);
+                register_code16(KC_GRV);
+                unregister_code16(KC_GRV);
+                unregister_code16(KC_GRV);
+                unregister_code16(KC_GRV);
+            }
+            return true;
+        case C_OBJACC:
+            if (record->event.pressed) {
+                register_code16(KC_MINS);
+                register_code16(KC_RABK);
+                unregister_code16(KC_RABK);
+                unregister_code16(KC_MINS);
+            }
+            return true;
+        default:
+            return true;
+    }
 }
