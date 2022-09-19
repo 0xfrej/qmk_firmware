@@ -12,8 +12,8 @@ LTO_ENABLE 				= yes
 AVR_USE_MINIMAL_PRINTF 	= yes
 
 # debug
-DEBUG_ENABLE	= no
-CONSOLE_ENABLE 	= no # Console for debug(+400b)
+DEBUG_ENABLE	= yes
+CONSOLE_ENABLE 	= yes # Console for debug(+400b)
 VARIABLE_TRACE 	= no
 
 NKRO_ENABLE					= yes # USB Nkey Rollover - if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
@@ -33,7 +33,7 @@ POINTING_DEVICE_ENABLE 		= no # Used as mousekey replacement because it's more l
 POINTING_DEVICE_DRIVER		= custom
 DYNAMIC_MACRO_ENABLE		= yes
 PROGRAMMABLE_BUTTON_ENABLE 	= no
-STENO_ENABLE 				= yes # Only enable if you don't mind possibly not having working keyboard in BIOS
+STENO_ENABLE 				= no # Only enable if you don't mind possibly not having working keyboard in BIOS
 STENO_PROTOCOL 				= txbolt
 
 UNICODE_ENABLE    = no

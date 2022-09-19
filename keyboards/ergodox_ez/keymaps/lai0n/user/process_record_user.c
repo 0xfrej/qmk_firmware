@@ -24,102 +24,62 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case C_INC:
             if (record->event.pressed) {
-                register_code16(KC_PLUS);
-                register_code16(KC_PLUS);
-                unregister_code16(KC_PLUS);
-                unregister_code16(KC_PLUS);
+                SEND_STRING("++");
             }
             return true;
         case C_DEC:
             if (record->event.pressed) {
-                register_code16(KC_MINS);
-                register_code16(KC_MINS);
-                unregister_code16(KC_MINS);
-                unregister_code16(KC_MINS);
+                SEND_STRING("--");
             }
             return true;
         case C_AND:
             if (record->event.pressed) {
-                register_code16(KC_AMPR);
-                register_code16(KC_AMPR);
-                unregister_code16(KC_AMPR);
-                unregister_code16(KC_AMPR);
+                SEND_STRING("&&");
             }
             return true;
         case C_OR:
             if (record->event.pressed) {
-                register_code16(KC_PIPE);
-                register_code16(KC_PIPE);
-                unregister_code16(KC_PIPE);
-                unregister_code16(KC_PIPE);
+                SEND_STRING("||");
             }
             return true;
         case C_DQMRK:
             if (record->event.pressed) {
-                register_code16(KC_QUES);
-                register_code16(KC_QUES);
-                unregister_code16(KC_QUES);
-                unregister_code16(KC_QUES);
+                SEND_STRING("??");
             }
             return true;
         case C_DBSLS:
             if (record->event.pressed) {
-                register_code16(KC_NUBS);
-                register_code16(KC_NUBS);
-                unregister_code16(KC_NUBS);
-                unregister_code16(KC_NUBS);
+                SEND_STRING("\\\\");
             }
             return true;
         case C_DUNDS:
             if (record->event.pressed) {
-                register_code16(KC_UNDS);
-                register_code16(KC_UNDS);
-                unregister_code16(KC_UNDS);
-                unregister_code16(KC_UNDS);
+                SEND_STRING("__");
             }
             return true;
         case C_DEQL:
             if (record->event.pressed) {
-                register_code16(KC_EQL);
-                register_code16(KC_EQL);
-                unregister_code16(KC_EQL);
-                unregister_code16(KC_EQL);
+                SEND_STRING("==");
             }
             return true;
         case C_TEQL:
             if (record->event.pressed) {
-                register_code16(KC_EQL);
-                register_code16(KC_EQL);
-                register_code16(KC_EQL);
-                unregister_code16(KC_EQL);
-                unregister_code16(KC_EQL);
-                unregister_code16(KC_EQL);
+                SEND_STRING("===");
             }
             return true;
         case C_DCLN:
             if (record->event.pressed) {
-                register_code16(KC_COLN);
-                register_code16(KC_COLN);
-                unregister_code16(KC_COLN);
-                unregister_code16(KC_COLN);
+                SEND_STRING("::");
             }
             return true;
         case C_TGRV:
             if (record->event.pressed) {
-                register_code16(KC_GRV);
-                register_code16(KC_GRV);
-                register_code16(KC_GRV);
-                unregister_code16(KC_GRV);
-                unregister_code16(KC_GRV);
-                unregister_code16(KC_GRV);
+                SEND_STRING("```");
             }
             return true;
         case C_OBJACC:
             if (record->event.pressed) {
-                register_code16(KC_MINS);
-                register_code16(KC_RABK);
-                unregister_code16(KC_RABK);
-                unregister_code16(KC_MINS);
+                SEND_STRING("->");
             }
             return true;
         default:
