@@ -13,7 +13,7 @@
 #define TAPPING_TERM 175
 #define TAPPING_TERM_PER_KEY
 
-#define DANCING_TERM 175
+#define DANCING_TERM 235
 
 #undef  DEBOUNCE
 #define DEBOUNCE 3

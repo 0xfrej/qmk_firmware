@@ -35,7 +35,9 @@ void set_led_state(led_state_t state) {
 }
 
 void update_leds_from_state(void) {
-    dprint("Update leds from state");
+    #ifdef DEBUG_ENABLE
+    print("Update leds from state");
+    #endif
     // Right hand status LEDs
     if (get_led_feature_state(status_right, LED_1)) {
         ergodox_right_led_1_on();
@@ -90,5 +92,7 @@ void clear_led_state(void) {
 
 void led_state_init(void) {
     clear_led_state();
-    dprint("LED State initialized");
+    #ifdef DEBUG_ENABLE
+    print("LED State initialized");
+    #endif
 }

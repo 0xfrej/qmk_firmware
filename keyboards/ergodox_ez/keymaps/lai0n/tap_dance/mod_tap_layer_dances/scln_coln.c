@@ -20,9 +20,8 @@ void scln_coln_finished(qk_tap_dance_state_t *state, void *user_data) {
             register_code16(KC_COLN);
             break;
 
-        case DOUBLE_SINGLE_TAP:
-            register_code16(KC_COLN);
-            register_code16(KC_COLN);
+        case DOUBLE_HOLD:
+            SEND_STRING("::");
             break;
     }
 }
@@ -40,11 +39,6 @@ void scln_coln_reset(qk_tap_dance_state_t *state, void *user_data) {
             break;
 
         case DOUBLE_TAP:
-            unregister_code16(KC_COLN);
-            break;
-
-        case DOUBLE_SINGLE_TAP:
-            unregister_code16(KC_COLN);
             unregister_code16(KC_COLN);
             break;
     }
