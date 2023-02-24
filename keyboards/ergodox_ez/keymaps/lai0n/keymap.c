@@ -1,10 +1,5 @@
 #include QMK_KEYBOARD_H       // Includes the QMK-verse.
 
-#ifdef STENO_ENABLE
-    #include "keymap_plover.h"    // Includes the Plover keymap for easier readability.
-    #include "plover/plover_mode.c"
-#endif
-
 #ifdef POINTING_DEVICE_ENABLE
     #include "pointing_device.h"  // Includes pointing device functions
 #endif

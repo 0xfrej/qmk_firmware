@@ -14,31 +14,19 @@ Configure your OS keyboard layout to US, or the keymap will be incorrect.
 * All symbols (including shifted symbols).
 * All modifier are dual keys positioned near the home row.
 
-2. Querty
-
-* Used to overcome the limitation pointed above, when your OS layout is set to Dvorak instead of US, this way you can use
-    Standard Dvorak (available by default on all the main operating systems) on other normal keybdoards and Hacker Dvorak on
-    the Ergodox EZ Shine at the same time, without changing back and forth tho OS layout.
-
-3. Gaming
-
-* Still in development.
-* Left side is mainly "normal" Qwerty.
-* Right side is mainly for movement, either using the mouse, the arrow keys, the number pad or the `H`, `J`, `K`, `L` as       direction keys.
-
-4. Arrows
+2. Arrows
 
 * Arrow keys navigation.
 * All modifier keys.
 * Common text edititng shortcuts (doesn't work for MacOS).
 
-5. Mouse
+3. Mouse
 
 * Mouse navigation.
 * All modifier keys.
 * Common text edititng shortcuts (doesn't work for MacOS).
 
-6. Numpad
+4. Numpad
 
 * ATM style numpad.
 * All modifier keys.
@@ -50,20 +38,12 @@ Configure your OS keyboard layout to US, or the keymap will be incorrect.
 * `I` and `M` for complex Julia numeric literals, ie. `3im`.
 * Common symbols for mathematical operations.
 
-7. Hyper Fn
+5. Hyper Fn
 
 * Useful for custom global shortcuts.
 
-8. Media Fn
+6. Media Fn
 
 * Media keys.
 * Function keys.
 * EZ Shine keys.
-
-9. Meh Fn
-
-* Useful for custom application shortcuts.
-
-10. Meh Fn +
-
-* Useful for custom standard shortcuts.

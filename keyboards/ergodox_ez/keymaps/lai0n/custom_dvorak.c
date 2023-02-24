@@ -1,9 +1,3 @@
-#ifdef STENO_ENABLE
-#define TO_PLOVER TO(PLOVER)
-#else
-#define TO_PLOVER XXXXXXX
-#endif
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
      * ,--------------------------------------------------.    ,--------------------------------------------------.
@@ -36,19 +30,6 @@ DYN_REC_STOP, TD(SCLN_COLN),  LCAG_T(KC_Q), TD(J_MED_MEH), TD(K_NUM_HYP),  LCSG_
                                                                                 KC_WH_L,         KC_WH_R,      KC_WH_U        , KC_WH_D      ,
                                                                                                  KC_HOME,      KC_PGUP        ,
                                                                   KC_SPC,       KC_BSPC,          KC_END,      KC_PGDN        , TD(LSFT_DEL) , KC_ENT
-),
-
-// TODO: rewrite QWERTY layout
-[QWERTY] = LAYOUT_ergodox_pretty(
-       KC_ESCAPE, GUI_T(KC_MINS),    KC_I,   KC_O,     KC_P, ALGR_T(KC_EQL),      KC_T,      KC_QUOT      , KC_Y      , KC_K      , KC_U       , KC_KP_7, KC_KP_8 , KC_KP_9 ,
-          KC_TAB,        KC_LALT,    KC_Q,   KC_W,     KC_E,    ALL_T(KC_R),      KC_G,      KC_MS_WH_UP  , KC_H      , KC_J      , KC_L       , KC_KP_4, KC_KP_2 , KC_KP_6 ,
-LT(MOUSE,KC_GRV),       KC_LCTRL,    KC_A,   KC_S,     KC_D,    MEH_T(KC_F),                                KC_B      , KC_MS_UP  , KC_N       , KC_KP_1, KC_KP_5 , KC_KP_3 ,
-         KC_BSLS,      KC_LSHIFT,    KC_Z,   KC_X,     KC_C,   SCMD_T(KC_V),      KC_M,      KC_MS_WH_DOWN, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, KC_UP  , KC_KP_0 , KC_SLASH,
-         XXXXXXX,      TG(CHORD), KC_COMM, KC_DOT,  KC_LBRC,                                                            KC_RBRC   , KC_LEFT    , KC_DOWN, KC_RIGHT, XXXXXXX ,
-
-                                                               MO(MEDIA_FN),   KC_NLCK,      KC_MS_BTN5   , MO(CHORD) ,
-                                                                               KC_SCLN,      KC_MS_BTN4   ,
-                                                   KC_SPACE,       KC_ENTER, KC_BSPACE,      KC_MS_BTN3   , KC_MS_BTN2, KC_MS_BTN1
 ),
 
 [ARROWS] = LAYOUT_ergodox_pretty(
@@ -100,7 +81,7 @@ XXXXXXX, KC_CLCK, KC_PSCREEN, XXXXXXX, XXXXXXX,                                 
 ),
 
 [CHORD] = LAYOUT_ergodox_pretty(
-XXXXXXX,  HYPR(KC_F1),  HYPR(KC_F2),  HYPR(KC_F3),  HYPR(KC_F4),  HYPR(KC_F5), XXXXXXX,      XXXXXXX         , XXXXXXX, TO(DVORAK), TO_PLOVER, TO(QWERTY), XXXXXXX, XXXXXXX,
+XXXXXXX,  HYPR(KC_F1),  HYPR(KC_F2),  HYPR(KC_F3),  HYPR(KC_F4),  HYPR(KC_F5), XXXXXXX,      XXXXXXX         , XXXXXXX, XXXXXXX   , XXXXXXX  , XXXXXXX   , XXXXXXX, XXXXXXX,
 XXXXXXX,  HYPR(KC_F6),  HYPR(KC_F7),  HYPR(KC_F8),  HYPR(KC_F9), HYPR(KC_F10), XXXXXXX,      XXXXXXX         , XXXXXXX, XXXXXXX   , XXXXXXX  , XXXXXXX   , XXXXXXX, XXXXXXX,
 XXXXXXX, HYPR(KC_F11), HYPR(KC_F12), HYPR(KC_F13), HYPR(KC_F14), HYPR(KC_F15),                                 XXXXXXX, XXXXXXX   , _______  , XXXXXXX   , XXXXXXX, XXXXXXX,
 XXXXXXX, HYPR(KC_F16), HYPR(KC_F17), HYPR(KC_F18), HYPR(KC_F19), HYPR(KC_F20), XXXXXXX,      XXXXXXX         , XXXXXXX, XXXXXXX   , XXXXXXX  , XXXXXXX   , XXXXXXX, XXXXXXX,
@@ -109,19 +90,5 @@ _______, HYPR(KC_F21), HYPR(KC_F22), HYPR(KC_F23), HYPR(KC_F24),                
                                                                       XXXXXXX, XXXXXXX,      TD(HOLD_BOOT)   , _______,
                                                                                XXXXXXX,      TD(HOLD_EEP_RST),
                                                         XXXXXXX,      XXXXXXX, XXXXXXX,      LED_LEVEL       , XXXXXXX, XXXXXXX
-),
-
-#ifdef STENO_ENABLE
-[PLOVER] = LAYOUT_ergodox_pretty(
-XXXXXXX,    XXXXXXX, KC_MS_BTN2,   KC_MS_UP,  KC_MS_BTN1, KC_MS_BTN3, GUI_T(KC_NO),      KC_MS_ACCEL2, KC_MS_ACCEL1 , KC_MS_ACCEL0, KC_UP  , KC_APPLICATION, XXXXXXX       , KC_MS_WH_UP  ,
- KC_ESC, KC_MS_BTN4, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, KC_MS_BTN5,       PV_NUM,      PV_NUM      , KC_MS_WH_LEFT, KC_LEFT     , KC_DOWN, KC_RIGHT      , KC_MS_WH_RIGHT, KC_MS_WH_DOWN,
- KC_TAB,      PV_LS,      PV_LT,      PV_LP,       PV_LH,    PV_STAR,                                  PV_STAR      , PV_RF       , PV_RP  , PV_RL         , PV_RT         , PV_RD        ,
-KC_CLCK,      PV_LS,      PV_LK,      PV_LW,       PV_LR,    PV_STAR,      PV_STAR,      PV_STAR     , PV_STAR      , PV_RR       , PV_RB  , PV_RG         , PV_RS         , PV_RZ        ,
-XXXXXXX,  TG(CHORD),     PV_NUM,     PV_NUM,      PV_NUM,                                                             PV_NUM      , PV_NUM , PV_NUM        , PV_NUM        , XXXXXXX      ,
-
-                                                            KC_SPACE,    KC_BSPACE,      KC_DELETE   , KC_ENTER     ,
-                                                                           KC_HOME,      KC_PGUP     ,
-                                                    PV_A,       PV_O,       KC_END,      KC_PGDOWN   , PV_E         , PV_U
 )
-#endif
 };

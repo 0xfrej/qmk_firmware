@@ -33,8 +33,6 @@ POINTING_DEVICE_ENABLE 		= no # Used as mousekey replacement because it's more l
 POINTING_DEVICE_DRIVER		= custom
 DYNAMIC_MACRO_ENABLE		= yes
 PROGRAMMABLE_BUTTON_ENABLE 	= no
-STENO_ENABLE 				= yes # Only enable if you don't mind possibly not having working keyboard in BIOS
-STENO_PROTOCOL 				= txbolt
 
 UNICODE_ENABLE    = no
 UCIS_ENABLE       = no  # For Unicode.
@@ -45,7 +43,7 @@ SWAP_HANDS_ENABLE = no  # Allow swapping hands of keyboard.
 DEFERRED_EXEC_ENABLE = yes
 
 # HW
-RAW_ENABLE 			= yes  # Turn off if You do not require this
+RAW_ENABLE 			= no   # Turn off if You do not require this
 SLEEP_LED_ENABLE  	= yes  # Turn off leds when computer is sleeping.
 RGBLIGHT_ENABLE 	= no
 BACKLIGHT_ENABLE  	= no
