@@ -3,7 +3,7 @@ static tap rprn_rabk_state = {
     .state           = 0
 };
 
-void rprn_rabk_finished(qk_tap_dance_state_t *state, void *user_data) {
+void rprn_rabk_finished(tap_dance_state_t *state, void *user_data) {
     rprn_rabk_state.state = current_dance(state);
     switch (rprn_rabk_state.state) {
         case SINGLE_TAP:
@@ -18,7 +18,7 @@ void rprn_rabk_finished(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void rprn_rabk_reset(qk_tap_dance_state_t *state, void *user_data) {
+void rprn_rabk_reset(tap_dance_state_t *state, void *user_data) {
     switch (rprn_rabk_state.state) {
         case SINGLE_TAP:
             unregister_code16(KC_RPRN);

@@ -3,7 +3,7 @@ static tap grv_tild_state = {
     .state           = 0
 };
 
-void grv_tild_finished(qk_tap_dance_state_t *state, void *user_data) {
+void grv_tild_finished(tap_dance_state_t *state, void *user_data) {
     grv_tild_state.state = current_dance(state);
     switch (grv_tild_state.state) {
         case SINGLE_TAP:
@@ -18,7 +18,7 @@ void grv_tild_finished(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void grv_tild_reset(qk_tap_dance_state_t *state, void *user_data) {
+void grv_tild_reset(tap_dance_state_t *state, void *user_data) {
     switch (grv_tild_state.state) {
         case SINGLE_TAP:
             unregister_code16(KC_GRV);

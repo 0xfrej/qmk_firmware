@@ -3,7 +3,7 @@ static tap slsh_bsls_state = {
     .state           = 0
 };
 
-void slsh_bsls_finished(qk_tap_dance_state_t *state, void *user_data) {
+void slsh_bsls_finished(tap_dance_state_t *state, void *user_data) {
     slsh_bsls_state.state = current_dance(state);
     switch (slsh_bsls_state.state) {
         case SINGLE_TAP:
@@ -18,7 +18,7 @@ void slsh_bsls_finished(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void slsh_bsls_reset(qk_tap_dance_state_t *state, void *user_data) {
+void slsh_bsls_reset(tap_dance_state_t *state, void *user_data) {
     switch (slsh_bsls_state.state) {
         case SINGLE_TAP:
             unregister_code16(KC_SLSH);

@@ -3,7 +3,7 @@ static tap exlm_ques_state = {
     .state           = 0
 };
 
-void exlm_ques_finished(qk_tap_dance_state_t *state, void *user_data) {
+void exlm_ques_finished(tap_dance_state_t *state, void *user_data) {
     exlm_ques_state.state = current_dance(state);
     switch (exlm_ques_state.state) {
         case SINGLE_TAP:
@@ -18,7 +18,7 @@ void exlm_ques_finished(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void exlm_ques_reset(qk_tap_dance_state_t *state, void *user_data) {
+void exlm_ques_reset(tap_dance_state_t *state, void *user_data) {
     switch (exlm_ques_state.state) {
         case SINGLE_TAP:
             unregister_code16(KC_EXLM);

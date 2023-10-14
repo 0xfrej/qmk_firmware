@@ -3,7 +3,7 @@ static tap mins_unds_state = {
     .state           = 0
 };
 
-void mins_unds_finished(qk_tap_dance_state_t *state, void *user_data) {
+void mins_unds_finished(tap_dance_state_t *state, void *user_data) {
     mins_unds_state.state = current_dance(state);
     switch (mins_unds_state.state) {
         case SINGLE_TAP:
@@ -21,7 +21,7 @@ void mins_unds_finished(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void mins_unds_reset(qk_tap_dance_state_t *state, void *user_data) {
+void mins_unds_reset(tap_dance_state_t *state, void *user_data) {
     switch (mins_unds_state.state) {
         case SINGLE_TAP:
             unregister_code16(KC_MINS);

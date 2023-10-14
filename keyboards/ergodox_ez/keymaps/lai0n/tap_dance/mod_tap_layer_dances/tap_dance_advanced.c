@@ -3,7 +3,7 @@ static tap tap_dance_advanced_state = {
     .state           = 0
 };
 
-void qk_tap_dance_advanced_finished(qk_tap_dance_state_t *state, void *user_data) {
+void qk_tap_dance_advanced_finished(tap_dance_state_t *state, void *user_data) {
     qk_tap_dance_advanced_t *tuple = (qk_tap_dance_advanced_t *)user_data;
     tap_dance_advanced_state.state = current_dance(state);
     switch (tap_dance_advanced_state.state) {
@@ -34,7 +34,7 @@ void qk_tap_dance_advanced_finished(qk_tap_dance_state_t *state, void *user_data
     }
 }
 
-void qk_tap_dance_advanced_reset(qk_tap_dance_state_t *state, void *user_data) {
+void qk_tap_dance_advanced_reset(tap_dance_state_t *state, void *user_data) {
     qk_tap_dance_advanced_t *tuple = (qk_tap_dance_advanced_t *)user_data;
     switch (tap_dance_advanced_state.state) {
         case SINGLE_TAP:

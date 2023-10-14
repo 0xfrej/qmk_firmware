@@ -1,5 +1,3 @@
-#include "../leader/leader_setup.c"
-
 bool MATRIX_SCANNED = false;
 
 void matrix_scan_user(void) {
@@ -7,6 +5,4 @@ void matrix_scan_user(void) {
         //rgblight_sethsv_noeeprom_green();
         MATRIX_SCANNED = true;
     }
-
-    #include "../leader/leader_dictionary.c"
 };

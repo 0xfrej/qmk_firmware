@@ -18,11 +18,11 @@ VARIABLE_TRACE 	= no
 
 NKRO_ENABLE					= yes # USB Nkey Rollover - if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
 EXTRAKEY_ENABLE 			= yes # Audio control and System control(+450b).
-LEADER_ENABLE 				= yes
+LEADER_ENABLE 				= no
 TAP_DANCE_ENABLE 			= yes
-CAPS_WORD_ENABLE 			= yes
+CAPS_WORD_ENABLE 			= no
 COMBO_ENABLE      			= no
-AUTO_SHIFT_ENABLE    		= no # Autoshift collides with the layout so it's not an useful feature
+AUTO_SHIFT_ENABLE    		= yes
 KEY_LOCK_ENABLE   			= no  # (+1730b)
 SPACE_CADET_ENABLE 			= no
 GRAVE_ESC_ENABLE 			= no
@@ -33,6 +33,7 @@ POINTING_DEVICE_ENABLE 		= no # Used as mousekey replacement because it's more l
 POINTING_DEVICE_DRIVER		= custom
 DYNAMIC_MACRO_ENABLE		= yes
 PROGRAMMABLE_BUTTON_ENABLE 	= no
+REPEAT_KEY_ENABLE 			= yes
 
 UNICODE_ENABLE    = no
 UCIS_ENABLE       = no  # For Unicode.

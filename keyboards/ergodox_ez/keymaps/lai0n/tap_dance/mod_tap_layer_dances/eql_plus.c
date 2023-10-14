@@ -3,7 +3,7 @@ static tap eql_plus_state = {
     .state           = 0
 };
 
-void eql_plus_finished(qk_tap_dance_state_t *state, void *user_data) {
+void eql_plus_finished(tap_dance_state_t *state, void *user_data) {
     eql_plus_state.state = current_dance(state);
     switch (eql_plus_state.state) {
         case SINGLE_TAP:
@@ -24,7 +24,7 @@ void eql_plus_finished(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void eql_plus_reset(qk_tap_dance_state_t *state, void *user_data) {
+void eql_plus_reset(tap_dance_state_t *state, void *user_data) {
     switch (eql_plus_state.state) {
         case SINGLE_TAP:
             unregister_code16(KC_EQL);

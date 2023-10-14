@@ -3,7 +3,7 @@ static tap TEMPLATE_state = {
     .state           = 0
 };
 
-void TEMPLATE_finished(qk_tap_dance_state_t *state, void *user_data) {
+void TEMPLATE_finished(tap_dance_state_t *state, void *user_data) {
     TEMPLATE_state.state = current_dance(state);
     switch (TEMPLATE_state.state) {
         case SINGLE_TAP:
@@ -33,7 +33,7 @@ void TEMPLATE_finished(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void TEMPLATE_reset(qk_tap_dance_state_t *state, void *user_data) {
+void TEMPLATE_reset(tap_dance_state_t *state, void *user_data) {
     switch (TEMPLATE_state.state) {
         case SINGLE_TAP:
             unregister_code16(KC_NO);

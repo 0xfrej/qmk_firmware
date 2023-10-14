@@ -3,7 +3,7 @@ static tap ampr_pipe_state = {
     .state           = 0
 };
 
-void ampr_pipe_finished(qk_tap_dance_state_t *state, void *user_data) {
+void ampr_pipe_finished(tap_dance_state_t *state, void *user_data) {
     ampr_pipe_state.state = current_dance(state);
     switch (ampr_pipe_state.state) {
         case SINGLE_TAP:
@@ -21,7 +21,7 @@ void ampr_pipe_finished(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void ampr_pipe_reset(qk_tap_dance_state_t *state, void *user_data) {
+void ampr_pipe_reset(tap_dance_state_t *state, void *user_data) {
     switch (ampr_pipe_state.state) {
         case SINGLE_TAP:
             unregister_code16(KC_AMPR);

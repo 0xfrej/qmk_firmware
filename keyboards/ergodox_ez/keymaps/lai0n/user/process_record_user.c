@@ -1,4 +1,4 @@
-bool SCROLL_LOCK = false;
+// bool SCROLL_LOCK = false;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
@@ -14,24 +14,24 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 
-        case KC_SLCK:
-            if (record->event.pressed) {
-                if (!(SCROLL_LOCK)) {
-                    SCROLL_LOCK = true;
-                } else {
-                    SCROLL_LOCK = false;
-                }
-            }
-            return true;
+        // case KC_SLCK:
+        //     if (record->event.pressed) {
+        //         if (!(SCROLL_LOCK)) {
+        //             SCROLL_LOCK = true;
+        //         } else {
+        //             SCROLL_LOCK = false;
+        //         }
+        //     }
+        //     return true;
 
-        case KC_MS_WH_UP ... KC_MS_WH_RIGHT:
-            if (record->event.pressed) {
-                if (SCROLL_LOCK) {
-                    return false;
-                } else {
-                    return true;
-                }
-            }
+        // case KC_MS_WH_UP ... KC_MS_WH_RIGHT:
+        //     if (record->event.pressed) {
+        //         if (SCROLL_LOCK) {
+        //             return false;
+        //         } else {
+        //             return true;
+        //         }
+        //     }
         default:
             return true;
     }

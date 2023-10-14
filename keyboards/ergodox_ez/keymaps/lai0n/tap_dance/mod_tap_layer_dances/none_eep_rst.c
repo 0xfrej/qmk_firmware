@@ -3,7 +3,7 @@ static tap none_eeprst_state = {
     .state           = 0
 };
 
-void none_eep_rst_finished(qk_tap_dance_state_t *state, void *user_data) {
+void none_eep_rst_finished(tap_dance_state_t *state, void *user_data) {
     none_eeprst_state.state = current_dance(state);
     switch (none_eeprst_state.state) {
         case SINGLE_TAP:
@@ -16,7 +16,7 @@ void none_eep_rst_finished(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void none_eep_rst_reset(qk_tap_dance_state_t *state, void *user_data) {
+void none_eep_rst_reset(tap_dance_state_t *state, void *user_data) {
     switch (none_eeprst_state.state) {
         case SINGLE_TAP:
             unregister_code(KC_NO);
