@@ -87,8 +87,21 @@ XXXXXXX, HYPR(KC_F11), HYPR(KC_F12), HYPR(KC_F13), HYPR(KC_F14), HYPR(KC_F15),  
 XXXXXXX, HYPR(KC_F16), HYPR(KC_F17), HYPR(KC_F18), HYPR(KC_F19), HYPR(KC_F20), XXXXXXX,      XXXXXXX         , XXXXXXX, XXXXXXX   , XXXXXXX  , XXXXXXX   , XXXXXXX, XXXXXXX,
 _______, HYPR(KC_F21), HYPR(KC_F22), HYPR(KC_F23), HYPR(KC_F24),                                                        XXXXXXX   , XXXXXXX  , XXXXXXX   , XXXXXXX, XXXXXXX,
 
-                                                                      XXXXXXX, XXXXXXX,      TD(HOLD_BOOT)   , _______,
+                                                                      XXXXXXX, TO(GAMING),   TD(HOLD_BOOT)   , _______,
                                                                                XXXXXXX,      TD(HOLD_EEP_RST),
                                                         XXXXXXX,      XXXXXXX, XXXXXXX,      LED_LEVEL       , XXXXXXX, XXXXXXX
-)
+),
+
+[GAMING] = LAYOUT_ergodox(
+    KC_ESCAPE,          GUI_T(KC_MINS), KC_I,     KC_O,   KC_P,   ALGR_T(KC_EQL), KC_T,      KC_QUOT,       KC_Y,       KC_K,        KC_U,        KC_KP_7, KC_KP_8,  KC_KP_9,
+    KC_TAB,             KC_LALT,        KC_Q,     KC_W,   KC_E,   ALL_T(KC_R),    KC_G,      KC_MS_WH_UP,   KC_H,       KC_J,        KC_L,        KC_KP_4, KC_KP_2,  KC_KP_6,
+    LT(MOUSE, KC_GRV),  KC_LCTL,        KC_A,     KC_S,   KC_D,   MEH_T(KC_F),                              KC_B,       KC_MS_UP,    KC_N,        KC_KP_1, KC_KP_5,  KC_KP_3,
+    KC_BSLS,            KC_LSFT,        KC_Z,     KC_X,   KC_C,   SCMD_T(KC_V),   KC_M,      KC_MS_WH_DOWN, KC_MS_LEFT, KC_MS_DOWN,  KC_MS_RIGHT, KC_UP,   KC_KP_0,  KC_SLASH,
+    XXXXXXX,            TG(LAYERS),     KC_COMM,  KC_DOT, KC_LBRC,                                                      KC_RBRC,     KC_LEFT,     KC_DOWN, KC_RIGHT, XXXXXXX,
+
+
+                                                                MO(MEDIA_FN),   KC_NUM,     KC_MS_BTN5, MO(CHORD),
+                                                                                KC_SCLN,    KC_MS_BTN4,
+                                                    KC_SPACE,   KC_ENTER,       KC_BSPC,    KC_MS_BTN3, KC_MS_BTN2,   KC_MS_BTN1
+),
 };

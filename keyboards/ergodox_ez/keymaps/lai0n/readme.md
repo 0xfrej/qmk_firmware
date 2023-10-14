@@ -47,3 +47,19 @@ Configure your OS keyboard layout to US, or the keymap will be incorrect.
 * Media keys.
 * Function keys.
 * EZ Shine keys.
+
+## Notes
+
+### Most used shortcuts
+
+- desktop switch -  ctrl alt arrow
+* resize window - system arrow
+* idea switch tab - Alt+ArrowRight or Alt+ArrowLeft
+* idea switcher - ctrl tab
+* idea double shift
+* global search  ctrl shift f
+* search ctrl f
+* ctrl c, x, v, z,y
+* alt tab
+* system tab
+* idea column select mode alt shift insert
