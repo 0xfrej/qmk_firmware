@@ -22,9 +22,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [DVORAK] = LAYOUT_ergodox_pretty(
       KC_ESC,  TD(GRV_TILD),    TD(DLR_AT), TD(LCBR_LBRC), TD(LPRN_LABK), TD(EXLM_QUES), DM_REC1,      DM_REC2, TD(APMR_PIPE), TD(RPRN_RABK), TD(RCBR_RBRC), TD(HASH_PERC), TD(ASTR_CIRC), KC_INS       ,
-      KC_TAB, OSL(MEDIA_FN), TD(QUOT_DQUO),  TD(DOT_COMM), LCG_T(KC_P),   LAG_T(KC_Y),   DM_PLY1,      DM_PLY2, LAG_T(KC_F)  , LCG_T(KC_G)  , C_S_T(KC_C)  , LCA_T(KC_R)  , LAS_T(KC_L)  , TD(SLSH_BSLS),
-TD(EQL_PLUS),  LALT_T(KC_A),  LCTL_T(KC_O),  LSFT_T(KC_E), KC_U,          SGUI_T(KC_I),                         SGUI_T(KC_D) , KC_H,          LSFT_T(KC_T) , LCTL_T(KC_N) , LALT_T(KC_S) , TD(MINS_UNDS),
-     DM_RSTP, TD(SCLN_COLN),  LCAG_T(KC_Q),          KC_J, KC_K,          LCSG_T(KC_X),  KC_LGUI,      KC_LGUI, LCSG_T(KC_B) , KC_M,          KC_W,          LCAG_T(KC_V) , LASG_T(KC_Z) , COMPOSE      ,
+      KC_TAB, OSL(MEDIA_FN), TD(QUOT_DQUO),  TD(DOT_COMM), KC_P,   KC_Y,   DM_PLY1,      DM_PLY2, KC_F  , KC_G  , KC_C  , KC_R  , KC_L  , TD(SLSH_BSLS),
+TD(EQL_PLUS),  KC_A,  KC_O,  KC_E, KC_U,          KC_I,                         KC_D , KC_H,          KC_T , KC_N , KC_S , TD(MINS_UNDS),
+     DM_RSTP, TD(SCLN_COLN),  KC_Q,          KC_J, KC_K,          KC_X,  KC_LGUI,      KC_LGUI, KC_B , KC_M,          KC_W,          KC_V , KC_Z , COMPOSE      ,
    TG(CHORD),    TG(ARROWS),     TG(MOUSE),    TG(NUMPAD), TG(MEDIA_FN),                                                       KC_LEFT      , KC_UP        , KC_DOWN      , KC_RGHT      , KC_DEL       ,
 
                                                                                 KC_WH_L,         KC_WH_R,      KC_WH_U        , KC_WH_D,
@@ -37,7 +37,7 @@ TD(EQL_PLUS),  LALT_T(KC_A),  LCTL_T(KC_O),  LSFT_T(KC_E), KC_U,          SGUI_T
   KC_ESC,          KC_1,        KC_2,          KC_3,    KC_4,    KC_5,    KC_LEFT,              KC_RGHT,      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,           KC_MINS,
   KC_TAB,          KC_Q,        KC_W,          KC_E,    KC_R,    KC_T,    TG(CHORD),            TG(CHORD),    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,           KC_BSLS,
   KC_BSPC,         KC_A,        KC_S,          KC_D,    KC_F,    KC_G,                                        KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,        GUI_T(KC_QUOT),
-  KC_LSFT,         CTL_T(KC_Z), KC_X,          KC_C,    KC_V,    KC_B,    ALL_T(KC_NO),         MEH_T(KC_NO), KC_N,    KC_M,    KC_COMM, KC_DOT,  CTL_T(KC_SLSH), KC_RSFT,
+  KC_LSFT,         KC_Z,        KC_X,          KC_C,    KC_V,    KC_B,    ALL_T(KC_NO),         MEH_T(KC_NO), KC_N,    KC_M,    KC_COMM, KC_DOT,  CTL_T(KC_SLSH), KC_RSFT,
   KC_GRV,          KC_QUOT,     LALT(KC_LSFT), KC_LEFT, KC_RGHT,                                                       KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT,        KC_DEL,
                                                            ALT_T(KC_APP), KC_LGUI,                KC_LALT, CTL_T(KC_ESC),
                                                                           KC_HOME,                 KC_PGUP,
