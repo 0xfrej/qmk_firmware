@@ -21,57 +21,57 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
 
 [DVORAK] = LAYOUT_ergodox_pretty(
-      KC_ESC,  TD(GRV_TILD),    TD(DLR_AT), TD(LCBR_LBRC), TD(LPRN_LABK), TD(EXLM_QUES), DM_REC1,      DM_REC2, TD(APMR_PIPE), TD(RPRN_RABK), TD(RCBR_RBRC), TD(HASH_PERC), TD(ASTR_CIRC), KC_INS       ,
-      KC_TAB, OSL(MEDIA_FN), TD(QUOT_DQUO),  TD(DOT_COMM), KC_P,   KC_Y,   DM_PLY1,      DM_PLY2, KC_F  , KC_G  , KC_C  , KC_R  , KC_L  , TD(SLSH_BSLS),
-TD(EQL_PLUS),  KC_A,  KC_O,  KC_E, KC_U,          KC_I,                         KC_D , KC_H,          KC_T , KC_N , KC_S , TD(MINS_UNDS),
-     DM_RSTP, TD(SCLN_COLN),  KC_Q,          KC_J, KC_K,          KC_X,  KC_LGUI,      KC_LGUI, KC_B , KC_M,          KC_W,          KC_V , KC_Z , COMPOSE      ,
-   TG(CHORD),    TG(ARROWS),     TG(MOUSE),    TG(NUMPAD), TG(MEDIA_FN),                                                       KC_LEFT      , KC_UP        , KC_DOWN      , KC_RGHT      , KC_DEL       ,
+      KC_ESC,  TD(GRV_TILD),    TD(DLR_AT), TD(LCBR_LBRC), TD(LPRN_LABK), TD(EXLM_QUES), DM_REC1,      DM_REC2, TD(APMR_PIPE), TD(RPRN_RABK), TD(RCBR_RBRC), TD(HASH_PERC), TD(ASTR_CIRC),        KC_INS,
+      KC_TAB,    OSL(CHORD), TD(QUOT_DQUO),  TD(DOT_COMM),          KC_P,          KC_Y, DM_PLY1,      DM_PLY2,          KC_F,          KC_G,          KC_C,          KC_R,          KC_L, TD(SLSH_BSLS),
+TD(EQL_PLUS),          KC_A,          KC_O,          KC_E,          KC_U,          KC_I,                                 KC_D,          KC_H,          KC_T,          KC_N,          KC_S, TD(MINS_UNDS),
+     DM_RSTP, TD(SCLN_COLN),          KC_Q,          KC_J,          KC_K,          KC_X, KC_LGUI,      KC_LGUI,          KC_B,          KC_M,          KC_W,          KC_V,          KC_Z,       COMPOSE,
+   TG(CHORD),    TG(ARROWS),  TG(MEDIA_FN),    TG(NUMPAD),    TO(DVORAK),                                                            KC_LEFT,         KC_UP,       KC_DOWN,       KC_RGHT,        KC_DEL,
 
-                                                                                KC_WH_L,         KC_WH_R,      KC_WH_U        , KC_WH_D,
-                                                                                                 KC_HOME,      KC_PGUP        ,
-                                                                  KC_SPC,       KC_BSPC,          KC_END,      KC_PGDN        , QK_REP , KC_ENT
+                                                                        KC_WH_L,         KC_WH_R,      KC_WH_U        , KC_WH_D,
+                                                                                         KC_HOME,      KC_PGUP        ,
+                                                          KC_SPC,       KC_BSPC,          KC_END,      KC_PGDN        , QK_REP , KC_ENT
 ),
 
 
-[GAMING] = LAYOUT_ergodox_pretty(
-  KC_ESC,          KC_1,        KC_2,          KC_3,    KC_4,    KC_5,    KC_LEFT,              KC_RGHT,      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,           KC_MINS,
-  KC_TAB,          KC_Q,        KC_W,          KC_E,    KC_R,    KC_T,    TG(CHORD),            TG(CHORD),    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,           KC_BSLS,
-  KC_BSPC,         KC_A,        KC_S,          KC_D,    KC_F,    KC_G,                                        KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,        GUI_T(KC_QUOT),
-  KC_LSFT,         KC_Z,        KC_X,          KC_C,    KC_V,    KC_B,    ALL_T(KC_NO),         MEH_T(KC_NO), KC_N,    KC_M,    KC_COMM, KC_DOT,  CTL_T(KC_SLSH), KC_RSFT,
-  KC_GRV,          KC_QUOT,     LALT(KC_LSFT), KC_LEFT, KC_RGHT,                                                       KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT,        KC_DEL,
-                                                           ALT_T(KC_APP), KC_LGUI,                KC_LALT, CTL_T(KC_ESC),
-                                                                          KC_HOME,                 KC_PGUP,
-                                                         KC_SPC, KC_BSPC, KC_END,                  KC_PGDN, KC_TAB, KC_ENT
-),
+// [GAMING] = LAYOUT_ergodox_pretty(
+//   KC_ESC,          KC_1,        KC_2,          KC_3,    KC_4,    KC_5,    KC_LEFT,              KC_RGHT,      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,           KC_MINS,
+//   KC_TAB,          KC_Q,        KC_W,          KC_E,    KC_R,    KC_T,    TG(CHORD),            TG(CHORD),    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,           KC_BSLS,
+//   KC_BSPC,         KC_A,        KC_S,          KC_D,    KC_F,    KC_G,                                        KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,        GUI_T(KC_QUOT),
+//   KC_LSFT,         KC_Z,        KC_X,          KC_C,    KC_V,    KC_B,    ALL_T(KC_NO),         MEH_T(KC_NO), KC_N,    KC_M,    KC_COMM, KC_DOT,  CTL_T(KC_SLSH), KC_RSFT,
+//   KC_GRV,          KC_QUOT,     LALT(KC_LSFT), KC_LEFT, KC_RGHT,                                                       KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT,        KC_DEL,
+//                                                            ALT_T(KC_APP), KC_LGUI,                KC_LALT, CTL_T(KC_ESC),
+//                                                                           KC_HOME,                 KC_PGUP,
+//                                                          KC_SPC, KC_BSPC, KC_END,                  KC_PGDN, KC_TAB, KC_ENT
+// ),
 
 [ARROWS] = LAYOUT_ergodox_pretty(
 XXXXXXX,       XXXXXXX,      XXXXXXX,      XXXXXXX,  XXXXXXX,   XXXXXXX, XXXXXXX,      LGUI(KC_X), XXXXXXX      , LCTL(KC_X), KC_MS_WH_UP  , XXXXXXX   , XXXXXXX       , XXXXXXX       ,
 XXXXXXX, SCMD_T(KC_NO), MEH_T(KC_NO), ALL_T(KC_NO),  XXXXXXX,   XXXXXXX, XXXXXXX,      LGUI(KC_C), XXXXXXX      , LCTL(KC_C), KC_UP        , SCTL(KC_C), LCTL(KC_Z)    , LGUI(KC_Z)    ,
-XXXXXXX,      KC_LCTL,    KC_LSFT,      XXXXXXX,  _______,   XXXXXXX,                           KC_MS_WH_LEFT, KC_LEFT   , KC_DOWN      , KC_RIGHT  , KC_MS_WH_RIGHT, KC_APPLICATION,
+XXXXXXX,       KC_LCTL,      KC_LSFT,      XXXXXXX,  _______,   XXXXXXX,                           KC_MS_WH_LEFT, KC_LEFT   , KC_DOWN      , KC_RIGHT  , KC_MS_WH_RIGHT, KC_APPLICATION,
 XXXXXXX,       KC_RALT,      KC_LALT, GUI_T(KC_NO),  XXXXXXX,   XXXXXXX, XXXXXXX,      LGUI(KC_V), XXXXXXX      , LCTL(KC_V), KC_MS_WH_DOWN, SCTL(KC_V), LCTL(KC_Y)    , SGUI(KC_Z)    ,
 _______,       _______,      _______,      _______,  _______,                                                     XXXXXXX   , XXXXXXX      , XXXXXXX   , XXXXXXX       , XXXXXXX       ,
 
-                                                                XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX     ,
+                                                                KC_WH_L, KC_WH_R,      KC_WH_U, KC_WH_D     ,
                                                                          KC_HOME,      KC_PGUP,
                                                         KC_SPC, KC_BSPC,  KC_END,      KC_PGDN, QK_REP, KC_ENT
 ),
 
-[MOUSE] = LAYOUT_ergodox_pretty(
-   XXXXXXX,       XXXXXXX,    XXXXXXX,   KC_MS_WH_UP,  LCTL(KC_X),        XXXXXXX, LGUI(KC_X),      XXXXXXX, XXXXXXX, XXXXXXX     , XXXXXXX     , XXXXXXX     , XXXXXXX      , XXXXXXX     ,
-LGUI(KC_Z),    LCTL(KC_Z), SCTL(KC_C),      KC_MS_UP,  LCTL(KC_C),     KC_MS_BTN4, LGUI(KC_C),      XXXXXXX, XXXXXXX, XXXXXXX     , ALL_T(KC_NO), MEH_T(KC_NO), SCMD_T(KC_NO), XXXXXXX     ,
-KC_MS_BTN3, KC_MS_WH_LEFT, KC_MS_LEFT,    KC_MS_DOWN, KC_MS_RIGHT, KC_MS_WH_RIGHT,                           XXXXXXX, _______     , KC_MS_ACCEL1, KC_LSFT   , KC_LCTL     , KC_MS_ACCEL2,
-LGUI(KC_Z),    LCTL(KC_Y), SCTL(KC_V), KC_MS_WH_DOWN,  LCTL(KC_V),     KC_MS_BTN5, LGUI(KC_V),      XXXXXXX, XXXXXXX, XXXXXXX     , GUI_T(KC_NO), KC_LALT     , KC_RALT      , XXXXXXX     ,
-   _______,       _______,    _______,       _______,     _______,                                                    XXXXXXX     , XXXXXXX     , XXXXXXX     , XXXXXXX      , XXXXXXX     ,
+// [MOUSE] = LAYOUT_ergodox_pretty(
+//    XXXXXXX,       XXXXXXX,    XXXXXXX,   KC_MS_WH_UP,  LCTL(KC_X),        XXXXXXX, LGUI(KC_X),      XXXXXXX, XXXXXXX, XXXXXXX     , XXXXXXX     , XXXXXXX     , XXXXXXX      , XXXXXXX     ,
+// LGUI(KC_Z),    LCTL(KC_Z), SCTL(KC_C),      KC_MS_UP,  LCTL(KC_C),     KC_MS_BTN4, LGUI(KC_C),      XXXXXXX, XXXXXXX, XXXXXXX     , ALL_T(KC_NO), MEH_T(KC_NO), SCMD_T(KC_NO), XXXXXXX     ,
+// KC_MS_BTN3, KC_MS_WH_LEFT, KC_MS_LEFT,    KC_MS_DOWN, KC_MS_RIGHT, KC_MS_WH_RIGHT,                           XXXXXXX, _______     , KC_MS_ACCEL1, KC_LSFT   , KC_LCTL     , KC_MS_ACCEL2,
+// LGUI(KC_Z),    LCTL(KC_Y), SCTL(KC_V), KC_MS_WH_DOWN,  LCTL(KC_V),     KC_MS_BTN5, LGUI(KC_V),      XXXXXXX, XXXXXXX, XXXXXXX     , GUI_T(KC_NO), KC_LALT     , KC_RALT      , XXXXXXX     ,
+//    _______,       _______,    _______,       _______,     _______,                                                    XXXXXXX     , XXXXXXX     , XXXXXXX     , XXXXXXX      , XXXXXXX     ,
 
-                                                                          XXXXXXX,    XXXXXXX,      XXXXXXX, XXXXXXX,
-                                                                                      XXXXXXX,      XXXXXXX,
-                                                       KC_MS_BTN1,     KC_MS_BTN2,    XXXXXXX,      XXXXXXX, XXXXXXX, KC_MS_ACCEL0
-),
+//                                                                           XXXXXXX,    XXXXXXX,      XXXXXXX, XXXXXXX,
+//                                                                                       XXXXXXX,      XXXXXXX,
+//                                                        KC_MS_BTN1,     KC_MS_BTN2,    XXXXXXX,      XXXXXXX, XXXXXXX, KC_MS_ACCEL0
+// ),
 
 [NUMPAD] = LAYOUT_ergodox_pretty(
 XXXXXXX,  XXXXXXX,      XXXXXXX, XXXXXXX,       XXXXXXX,   XXXXXXX, XXXXXXX,      KC_X     , KC_A     , KC_B    , KC_C, KC_D   , KC_E   , KC_F   ,
 XXXXXXX,  XXXXXXX, GUI_T(KC_NO), XXXXXXX,  ALL_T(KC_NO),   XXXXXXX, XXXXXXX,      KC_O     , KC_I     , KC_1    , KC_2, KC_3   , KC_SLSH, KC_PERC,
-_______, KC_LCTL,    KC_LSFT, _______,  MEH_T(KC_NO),   XXXXXXX,                          KC_M     , KC_4    , KC_5, KC_6   , KC_PLUS, KC_MINS,
+_______,  KC_LCTL,      KC_LSFT, _______,  MEH_T(KC_NO),   XXXXXXX,                        , KC_M     , KC_4    , KC_5, KC_6   , KC_PLUS, KC_MINS,
 XXXXXXX,  KC_RALT,      KC_LALT, XXXXXXX, SCMD_T(KC_NO),   XXXXXXX, XXXXXXX,      KC_L     , KC_J     , KC_7    , KC_8, KC_9   , KC_ASTR, KC_CIRC,
 _______,  _______,      _______, _______,       _______,                                                KC_DOT  , KC_0, KC_COMM, KC_UNDS, KC_BSLS,
 
@@ -91,16 +91,19 @@ _______, _______, _______, _______, _______,                                    
                                                                 XXXXXXX,      XXXXXXX         ,
                                        XXXXXXX, XXXXXXX, KC_MEDIA_EJECT,      XXXXXXX         , XXXXXXX, XXXXXXX
 ),
-
+// TODO: add to right side common stuff for switching desktops, windows and copy&paste&cut
 [CHORD] = LAYOUT_ergodox_pretty(
 HYPR(KC_F21),  HYPR(KC_F1),  HYPR(KC_F2),  HYPR(KC_F3),  HYPR(KC_F4),  HYPR(KC_F5), XXXXXXX,      XXXXXXX         , XXXXXXX, XXXXXXX   , XXXXXXX  , XXXXXXX   , XXXXXXX, XXXXXXX,
 HYPR(KC_F22),  HYPR(KC_F6),  HYPR(KC_F7),  HYPR(KC_F8),  HYPR(KC_F9), HYPR(KC_F10), XXXXXXX,      XXXXXXX         , XXXXXXX, XXXXXXX   , XXXXXXX  , XXXXXXX   , XXXXXXX, XXXXXXX,
-HYPR(KC_F23), HYPR(KC_F11), HYPR(KC_F12), HYPR(KC_F13), HYPR(KC_F14), HYPR(KC_F15),                                 XXXXXXX, XXXXXXX   , XXXXXXX  , XXXXXXX   , XXXXXXX, XXXXXXX,
+HYPR(KC_F23), HYPR(KC_F11), HYPR(KC_F12), HYPR(KC_F13), HYPR(KC_F14), HYPR(KC_F15),                                 XXXXXXX, KC_LCTL   , KC_LALT  , KC_LGUI   , XXXXXXX, XXXXXXX,
 HYPR(KC_F24), HYPR(KC_F16), HYPR(KC_F17), HYPR(KC_F18), HYPR(KC_F19), HYPR(KC_F20), XXXXXXX,      XXXXXXX         , XXXXXXX, XXXXXXX   , XXXXXXX  , XXXXXXX   , XXXXXXX, XXXXXXX,
-_______,_______, _______, _______, _______,                                                        XXXXXXX   , XXXXXXX  , XXXXXXX   , XXXXXXX, XXXXXXX,
+_______,_______, _______, _______, _______,                                                                                  XXXXXXX   , XXXXXXX  , XXXXXXX   , XXXXXXX, XXXXXXX,
 
                                                                       XXXXXXX, DF(DVORAK),      TD(HOLD_BOOT)   , AS_TOGG,
-                                                                               DF(GAMING),      TD(HOLD_EEP_RST),
-                                                        XXXXXXX,      TO(DVORAK), TO(GAMING),      LED_LEVEL       , XXXXXXX, XXXXXXX
+                                                                               TO(DVORAK),      TD(HOLD_EEP_RST),
+                                                        XXXXXXX,      XXXXXXX,    XXXXXXX,      LED_LEVEL       , KC_BSPC, KC_LSFT
+                                                        //               XXXXXXX, DF(DVORAK),      TD(HOLD_BOOT)   , AS_TOGG,
+                                                        //                        DF(GAMING),      TD(HOLD_EEP_RST),
+                                                        // XXXXXXX,      TO(DVORAK), TO(GAMING),      LED_LEVEL       , XXXXXXX, XXXXXXX
 ),
 };
