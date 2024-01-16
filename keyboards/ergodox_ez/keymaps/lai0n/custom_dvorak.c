@@ -71,11 +71,11 @@ _______,       _______,      _______,      _______,  _______,                   
 [NUMPAD] = LAYOUT_ergodox_pretty(
 XXXXXXX,  XXXXXXX,      XXXXXXX, XXXXXXX,       XXXXXXX,   XXXXXXX, XXXXXXX,      KC_X     , KC_A     , KC_B    , KC_C, KC_D   , KC_E   , KC_F   ,
 XXXXXXX,  XXXXXXX, GUI_T(KC_NO), XXXXXXX,  ALL_T(KC_NO),   XXXXXXX, XXXXXXX,      KC_O     , KC_I     , KC_1    , KC_2, KC_3   , KC_SLSH, KC_PERC,
-_______,  KC_LCTL,      KC_LSFT, _______,  MEH_T(KC_NO),   XXXXXXX,                        , KC_M     , KC_4    , KC_5, KC_6   , KC_PLUS, KC_MINS,
+_______,  KC_LCTL,      KC_LSFT, _______,  MEH_T(KC_NO),   XXXXXXX,                          KC_M     , KC_4    , KC_5, KC_6   , KC_PLUS, KC_MINS,
 XXXXXXX,  KC_RALT,      KC_LALT, XXXXXXX, SCMD_T(KC_NO),   XXXXXXX, XXXXXXX,      KC_L     , KC_J     , KC_7    , KC_8, KC_9   , KC_ASTR, KC_CIRC,
 _______,  _______,      _______, _______,       _______,                                                KC_DOT  , KC_0, KC_COMM, KC_UNDS, KC_BSLS,
 
-                                                           XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX     ,
+                                                           XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX,
                                                                     KC_HOME,      KC_PGUP,
                                                    KC_SPC, KC_BSPC,  KC_END,      KC_PGDN, QK_REP, KC_ENT
 ),
@@ -85,7 +85,7 @@ KC_VOLD, KC_MUTE,    XXXXXXX, XXXXXXX, KC_MAIL, KC_FIND, KC_WWW_REFRESH,      KC
 KC_MPRV,   KC_F9,      KC_F7,   KC_F5,   KC_F3,   KC_F1,    KC_WWW_HOME,      KC_WWW_SEARCH   , KC_F2  , KC_F4  , KC_F6  , KC_F8  , KC_F10 , KC_MNXT,
 KC_PAUS,  KC_F19,     KC_F17,  KC_F15,  KC_F13,  KC_F11,                                        KC_F12 , KC_F14 , KC_F16 , KC_F18 , KC_F20 , KC_MPLY,
 XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,  KC_F23,  KC_F21,    KC_WWW_BACK,      KC_WWW_FORWARD  , KC_F22 , KC_F24 , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-_______, _______, _______, _______, _______,                                                          KC_PWR , XXXXXXX, KC_SLEP, KC_WAKE, XXXXXXX,
+_______, _______, _______, _______, _______,                                                             KC_PWR , XXXXXXX, KC_SLEP, KC_WAKE, XXXXXXX,
 
                                                 _______,        XXXXXXX,      XXXXXXX         , XXXXXXX,
                                                                 XXXXXXX,      XXXXXXX         ,
