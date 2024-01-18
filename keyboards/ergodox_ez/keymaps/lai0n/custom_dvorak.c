@@ -22,10 +22,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [DVORAK] = LAYOUT_ergodox_pretty(
       KC_ESC,  TD(GRV_TILD),    TD(DLR_AT), TD(LCBR_LBRC), TD(LPRN_LABK), TD(EXLM_QUES), DM_REC1,      DM_REC2, TD(APMR_PIPE), TD(RPRN_RABK), TD(RCBR_RBRC), TD(HASH_PERC), TD(ASTR_CIRC),        KC_INS,
-      KC_TAB,    OSL(CHORD), TD(QUOT_DQUO),  TD(DOT_COMM),          KC_P,          KC_Y, DM_PLY1,      DM_PLY2,          KC_F,          KC_G,          KC_C,          KC_R,          KC_L, TD(SLSH_BSLS),
+      KC_TAB,     TG(CHORD), TD(QUOT_DQUO),  TD(DOT_COMM),          KC_P,          KC_Y, DM_PLY1,      DM_PLY2,          KC_F,          KC_G,          KC_C,          KC_R,          KC_L, TD(SLSH_BSLS),
 TD(EQL_PLUS),          KC_A,          KC_O,          KC_E,          KC_U,          KC_I,                                 KC_D,          KC_H,          KC_T,          KC_N,          KC_S, TD(MINS_UNDS),
      DM_RSTP, TD(SCLN_COLN),          KC_Q,          KC_J,          KC_K,          KC_X, KC_LGUI,      KC_LGUI,          KC_B,          KC_M,          KC_W,          KC_V,          KC_Z,       COMPOSE,
-   TG(CHORD),    TG(ARROWS),  TG(MEDIA_FN),    TG(NUMPAD),    TO(DVORAK),                                                            KC_LEFT,         KC_UP,       KC_DOWN,       KC_RGHT,        KC_DEL,
+     XXXXXXX,    TG(ARROWS),  TG(MEDIA_FN),    TG(NUMPAD),    TO(DVORAK),                                                            KC_LEFT,         KC_UP,       KC_DOWN,       KC_RGHT,        KC_DEL,
 
                                                                         KC_WH_L,         KC_WH_R,      KC_WH_U        , KC_WH_D,
                                                                                          KC_HOME,      KC_PGUP        ,
@@ -101,9 +101,21 @@ _______,_______, _______, _______, _______,                                     
 
                                                                       XXXXXXX, DF(DVORAK),      TD(HOLD_BOOT)   , AS_TOGG,
                                                                                TO(DVORAK),      TD(HOLD_EEP_RST),
-                                                        XXXXXXX,      XXXXXXX,    XXXXXXX,      LED_LEVEL       , KC_BSPC, KC_LSFT
+                                                        XXXXXXX,   TO(PLOVER),    XXXXXXX,      LED_LEVEL       , KC_BSPC, KC_LSFT
                                                         //               XXXXXXX, DF(DVORAK),      TD(HOLD_BOOT)   , AS_TOGG,
                                                         //                        DF(GAMING),      TD(HOLD_EEP_RST),
                                                         // XXXXXXX,      TO(DVORAK), TO(GAMING),      LED_LEVEL       , XXXXXXX, XXXXXXX
 ),
+
+[PLOVER] = LAYOUT_ergodox_pretty(
+XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,     XXXXXXX,    XXXXXXX, GUI_T(KC_NO),      XXXXXXX     , XXXXXXX      , XXXXXXX     , XXXXXXX, XXXXXXX       , XXXXXXX       , XXXXXXX      ,
+ KC_ESC,    XXXXXXX,    XXXXXXX,    XXXXXXX,     XXXXXXX,    XXXXXXX,       PV_NUM,      PV_NUM      , XXXXXXX      , XXXXXXX     , XXXXXXX, XXXXXXX       , XXXXXXX       , XXXXXXX      ,
+ KC_TAB,      PV_LS,      PV_LT,      PV_LP,       PV_LH,    PV_STAR,                                  PV_STAR      , PV_RF       , PV_RP  , PV_RL         , PV_RT         , PV_RD        ,
+XXXXXXX,      PV_LS,      PV_LK,      PV_LW,       PV_LR,    PV_STAR,      PV_STAR,      PV_STAR     , PV_STAR      , PV_RR       , PV_RB  , PV_RG         , PV_RS         , PV_RZ        ,
+XXXXXXX,  TG(CHORD),     PV_NUM,     PV_NUM,      PV_NUM,                                                             PV_NUM      , PV_NUM , PV_NUM        , PV_NUM        , XXXXXXX      ,
+
+                                                              KC_SPACE,    KC_BSPC,      KC_DELETE   , KC_ENTER     ,
+                                                                           KC_HOME,      KC_PGUP     ,
+                                                    PV_A,       PV_O,       KC_END,      KC_PGDN     , PV_E         , PV_U
+)
 };

@@ -6,4 +6,5 @@ enum layers {     // Hacker Dvorak keyboard layers:
     NUMPAD   = 4, //   * ATM style numpad with symbols and letters that should suffice to input any numeric literal.
     MEDIA_FN = 5, //   * Media and function keys from F1 to F24 in symmetric fashion.
     CHORD    = 6, //   * Hot keys layer (uses hyper + F1 .. F24) suitable for global shortcut tasks.
+    PLOVER   = 7,    //   * Steno layer for use with Plover.
 };

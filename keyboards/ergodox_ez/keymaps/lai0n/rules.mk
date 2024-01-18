@@ -22,7 +22,7 @@ LEADER_ENABLE 				= no
 TAP_DANCE_ENABLE 			= yes
 CAPS_WORD_ENABLE 			= no
 COMBO_ENABLE      			= no
-AUTO_SHIFT_ENABLE    		= yes
+AUTO_SHIFT_ENABLE    		= no
 KEY_LOCK_ENABLE   			= no  # (+1730b)
 SPACE_CADET_ENABLE 			= no
 GRAVE_ESC_ENABLE 			= no
@@ -34,6 +34,8 @@ POINTING_DEVICE_DRIVER		= custom
 DYNAMIC_MACRO_ENABLE		= yes
 PROGRAMMABLE_BUTTON_ENABLE 	= no
 REPEAT_KEY_ENABLE 			= yes
+STENO_ENABLE 				= yes
+STENO_PROTOCOL 				= txbolt
 
 UNICODE_ENABLE    = no
 UCIS_ENABLE       = no  # For Unicode.
@@ -49,7 +51,6 @@ SLEEP_LED_ENABLE  	= yes  # Turn off leds when computer is sleeping.
 RGBLIGHT_ENABLE 	= no
 BACKLIGHT_ENABLE  	= no
 RGB_MATRIX_ENABLE 	= no
-
 
 # Please do not change anything under here
 # unless you know what you're doing.
